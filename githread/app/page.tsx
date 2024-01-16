@@ -1,11 +1,13 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import Image from 'next/image'
+import { getAuthSession } from '@/lib/auth';
 
-export default function Home() {
+export default async function Home() {
+  const session = await getAuthSession(); 
   return (
-    <div className='m-6'>
-      <Button className='m-4'>Click Me</Button>
+    <div className=''>
+       <p>{JSON.stringify(session, null, 2)}</p>
+      <Button className=''>Click Me</Button>
       <Input />
     </div>
   )

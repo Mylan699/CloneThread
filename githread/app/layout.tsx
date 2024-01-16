@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={clsx(inter.className, 'bg-background h-full')}><ThemeProvider attribute='class' defaultTheme='system' enableSystem>
         <div className='flex flex-col h-full'>
           <Header />
-          <div className='flex-1 max-w-lg m-auto py-12 w-full'>{children}</div>
+          <div className='flex-1 max-w-lg m-auto py-14 w-full'>{children}</div>
           <Footer />
         </div>
       </ThemeProvider></body>
